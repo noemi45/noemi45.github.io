@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+    <style>
+        #principal {
+            border: solid 1px black;
+            width: 80%;
+            margin: 0 auto;
+            podding: 5px;
+        }
+
+        center {
+            font-family: sans-serif;
+            padding: 5px;
+            font-size-adjust: 35;
+            font-size: 35px;
+
+        }
+
+
+        fieldset {
+            margin-bottom: 15px;
+        }
+
+        legend {
+            border: solid 1px violet;
+            padding: 6px;
+            font-family: fantasy;
+            border-radius: 20px;
+            background: lightblue;
+        }
+
+        #mifoto {
+            margin: 15px;
+            border: solid 4px black;
+        }
+
+        body {
+            background-color: #BBCBCB;
+        }
+
+        ul {
+
+            padding: 5px;
+            font-family: cursive;
+
+        }
+    </style>
+
+    <div id="principal">
+        <img src="fotohv.jpg" id="mifoto" width="150" align="left">
+        <center>
+            <h2>Alexis Lopez</h2>
+        </center>
+
+        <br><br><br><br>
+
+        <fieldset>
+            <legend>Datos Personales</legend>
+            <ul>
+                <li>DNI: 16.666.777</li>
+                <li>Fecha de nacimiento: 11/08/1987</li>
+                <li>Edad: 36 Años</li>
+                <li>Nacionalidad: Argentina</li>
+                <li>Direccion: Gaona 1254</li>
+                <li>Celular: 11-2345-7890</li>
+                <li>Email: Alexislopez1987@gmail.com</li>
+            </ul>
+        </fieldset>
+
+        <fieldset>
+            <legend>Estudios Realizados</legend>
+            <ul>
+                <li>Estudios primarios: Completos, Escuela San Martin</li>
+                <li>Estudios secundarios: Completos, Escuela San Martin</li>
+                <li>Estudios Universitarios: completo, Medico clinico 
+                    <a href="http://tu-sitio.com" 
+                    onmouseover="javascript:alert('Universidad UBA');return false">Vínculo</a> </li>
+            </ul>
+        </fieldset>
+
+        <fieldset>
+            <legend>Idiomas</legend>
+            <ul>
+                <li>Español</li>
+                <li>Ingles</li>
+
+            </ul>
+        </fieldset>
+
+        <fieldset>
+            <legend>Trabajos Anteriores</legend>
+            <ul>
+                <li>Hospital San Juan de Dios, 3 años</li>
+                <li>Clinica Provincial, 4 años</li>
+                <li>Centro medico CCP, 1 año</li>
+
+            </ul>
+        </fieldset>
+    </div>
+    <script>
+		function startTime(){
+		today=new Date();
+		h=today.getHours();
+		m=today.getMinutes();
+		s=today.getSeconds();
+		m=checkTime(m);
+		s=checkTime(s);
+		document.getElementById('reloj').innerHTML=h+":"+m+":"+s;
+		t=setTimeout('startTime()',500);}
+		function checkTime(i)
+		{if (i<10) {i="0" + i;}return i;}
+		window.onload=function(){startTime();}
+		</script>
+		<div id="reloj" style="font-size:20px;"></div>    
+
+		<div style="float:right;">
+			<script>
+			//<![CDATA[
+			var  today = new Date();
+			var m = today.getMonth() + 1;
+			var mes = (m < 10) ? '0' + m : m;
+			  document.write('Fecha: '+today.getDate(),'/' +mes,'/'+today.getYear());
+			//]]> 
+			</script></div>
+
+<input type="button" value="Imprime esta página" onclick="window.print()">
+
+</body>
+
+</html>
+
